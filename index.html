@@ -7,6 +7,26 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <title>Green AI Literacy</title>
+    <meta
+      name="description"
+      content="Pahami jejak AI dan gunakan saat benar-benar membantu belajar. Model, lab, misi, dan asesmen literasi AI hijau."
+    />
+    <meta property="og:title" content="Green AI Literacy" />
+    <meta
+      property="og:description"
+      content="Pahami jejak AI dan gunakan saat benar-benar membantu belajar."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      name="theme-color"
+      content="#f3efe2"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0c1a14"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +36,10 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
     <script defer src="scroll.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
     <script defer src="supabase-config.js"></script>
     <script defer src="admin.js"></script>
     <style>
@@ -226,6 +249,7 @@
     <link rel="stylesheet" href="theme.css" />
   </head>
   <body>
+    <a class="skip" href="#app-main">Lewati ke konten</a>
     <div id="pg"></div>
     <header class="nav">
       <div class="w">
@@ -264,15 +288,14 @@
         ><button class="l" data-go="saran" data-r="gsf">Saran</button
         ><button class="l" data-go="tentang" data-r="gsf">Tentang</button
         ><button class="l" id="admin-nav" data-go="admin" data-r="sgf" hidden>
-          Admin
-        </button
+          Admin</button
         ><span class="me" id="me"></span
         ><button class="btn" id="lgb" type="button">Masuk</button
         ><button id="th" aria-label="Ganti tema terang atau gelap">Tema</button>
       </div>
     </header>
 
-    <main id="app-main">
+    <main id="app-main" tabindex="-1">
       <div class="pg on" id="p-beranda">
         <section id="top" class="hero">
           <canvas id="cv" aria-hidden="true"></canvas>
@@ -861,7 +884,7 @@
         <section>
           <div class="w">
             <h2>Halaman ini butuh masuk</h2>
-            <p>
+            <p id="akses-msg">
               Halaman ini dibatasi menurut peran. Masuk sebagai siswa atau
               fasilitator untuk membukanya.
             </p>
@@ -1127,7 +1150,12 @@
               <h2>Masuk sebagai admin</h2>
               <form id="admin-login-form" class="f admin-form">
                 <label for="admin-email">Email</label>
-                <input id="admin-email" type="email" autocomplete="username" required />
+                <input
+                  id="admin-email"
+                  type="email"
+                  autocomplete="username"
+                  required
+                />
                 <label for="admin-password">Kata sandi</label>
                 <input
                   id="admin-password"
@@ -1140,8 +1168,12 @@
             </div>
             <div id="admin-dashboard" hidden>
               <div class="row admin-actions">
-                <button class="btn o" id="admin-refresh" type="button">Muat ulang</button>
-                <button class="btn o" id="admin-logout" type="button">Keluar</button>
+                <button class="btn o" id="admin-refresh" type="button">
+                  Muat ulang
+                </button>
+                <button class="btn o" id="admin-logout" type="button">
+                  Keluar
+                </button>
               </div>
               <section class="admin-section">
                 <h2 id="content-form-title">Tambah blok konten</h2>
@@ -1164,7 +1196,12 @@
                   <label for="content-title">Judul</label>
                   <input id="content-title" maxlength="160" required />
                   <label for="content-body">Isi</label>
-                  <textarea id="content-body" rows="5" maxlength="5000" required></textarea>
+                  <textarea
+                    id="content-body"
+                    rows="5"
+                    maxlength="5000"
+                    required
+                  ></textarea>
                   <label for="content-order">Urutan tampil</label>
                   <input id="content-order" type="number" value="0" step="1" />
                   <label>
@@ -1172,8 +1209,12 @@
                     Terbitkan konten
                   </label>
                   <div class="row">
-                    <button class="btn" id="content-save" type="submit">Simpan blok</button>
-                    <button class="btn o" id="content-cancel" type="button">Batal</button>
+                    <button class="btn" id="content-save" type="submit">
+                      Simpan blok
+                    </button>
+                    <button class="btn o" id="content-cancel" type="button">
+                      Batal
+                    </button>
                   </div>
                 </form>
                 <div id="admin-content-list" class="admin-list"></div>
@@ -1186,31 +1227,137 @@
                 <h2>Tambah hasil riset</h2>
                 <form id="research-form" class="f admin-form">
                   <label for="research-count">Jumlah peserta</label>
-                  <input id="research-count" type="number" min="1" step="1" required />
+                  <input
+                    id="research-count"
+                    type="number"
+                    min="1"
+                    step="1"
+                    required
+                  />
                   <fieldset>
                     <legend>Skor awal (4–16), enam dimensi G-R-E-E-N</legend>
                     <div class="admin-scores">
-                      <label>Knowledge <input id="research-pre-0" type="number" min="4" max="16" required /></label>
-                      <label>Awareness <input id="research-pre-1" type="number" min="4" max="16" required /></label>
-                      <label>Impact Recognition <input id="research-pre-2" type="number" min="4" max="16" required /></label>
-                      <label>Need Evaluation <input id="research-pre-3" type="number" min="4" max="16" required /></label>
-                      <label>Efficiency Judgment <input id="research-pre-4" type="number" min="4" max="16" required /></label>
-                      <label>Reflection <input id="research-pre-5" type="number" min="4" max="16" required /></label>
+                      <label
+                        >Knowledge
+                        <input
+                          id="research-pre-0"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Awareness
+                        <input
+                          id="research-pre-1"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Impact Recognition
+                        <input
+                          id="research-pre-2"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Need Evaluation
+                        <input
+                          id="research-pre-3"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Efficiency Judgment
+                        <input
+                          id="research-pre-4"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Reflection
+                        <input
+                          id="research-pre-5"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
                     </div>
                   </fieldset>
                   <fieldset>
                     <legend>Skor akhir (4–16), urutan dimensi sama</legend>
                     <div class="admin-scores">
-                      <label>Knowledge <input id="research-post-0" type="number" min="4" max="16" required /></label>
-                      <label>Awareness <input id="research-post-1" type="number" min="4" max="16" required /></label>
-                      <label>Impact Recognition <input id="research-post-2" type="number" min="4" max="16" required /></label>
-                      <label>Need Evaluation <input id="research-post-3" type="number" min="4" max="16" required /></label>
-                      <label>Efficiency Judgment <input id="research-post-4" type="number" min="4" max="16" required /></label>
-                      <label>Reflection <input id="research-post-5" type="number" min="4" max="16" required /></label>
+                      <label
+                        >Knowledge
+                        <input
+                          id="research-post-0"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Awareness
+                        <input
+                          id="research-post-1"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Impact Recognition
+                        <input
+                          id="research-post-2"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Need Evaluation
+                        <input
+                          id="research-post-3"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Efficiency Judgment
+                        <input
+                          id="research-post-4"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
+                      <label
+                        >Reflection
+                        <input
+                          id="research-post-5"
+                          type="number"
+                          min="4"
+                          max="16"
+                          required
+                      /></label>
                     </div>
                   </fieldset>
                   <label for="research-notes">Catatan</label>
-                  <textarea id="research-notes" rows="4" maxlength="5000"></textarea>
+                  <textarea
+                    id="research-notes"
+                    rows="4"
+                    maxlength="5000"
+                  ></textarea>
                   <label>
                     <input id="research-published" type="checkbox" />
                     Tampilkan sebagai hasil publik
@@ -1236,12 +1383,7 @@
         <label><input type="radio" name="pr" value="f" /> Fasilitator</label>
       </fieldset>
       <div class="f" style="display: grid; gap: 8px; margin: 10px 0">
-        <input
-          id="dnm"
-          placeholder="Nama"
-          maxlength="40"
-          autocomplete="name"
-        />
+        <input id="dnm" placeholder="Nama" maxlength="40" autocomplete="name" />
         <input id="dkl" placeholder="Kelas" maxlength="12" />
         <input id="dkc" placeholder="Kode kelas (opsional)" maxlength="12" />
         <input id="dkd" placeholder="Kode fasilitator" hidden />

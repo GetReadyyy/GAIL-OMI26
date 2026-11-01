@@ -6,7 +6,7 @@ const $ = (s) => document.querySelector(s),
     );
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-go]");
-  if (b) route(b.dataset.go);
+  if (b) route(b.dataset.go, true);
   const l = e.target.closest("[data-login]");
   if (l) op(l.dataset.login);
 });
@@ -620,12 +620,34 @@ function navs() {
   b.textContent = card() ? "Pelacak" : "Pelacak tertutup";
   pj();
 }
-function route(p) {
+let WANT = "";
+function route(p, moveFocus = false) {
   if (!PG.includes(p) || !document.getElementById("p-" + p)) p = "beranda";
+  const want = p;
+  WANT = "";
   {
     const nv = document.querySelector('.nav .l[data-go="' + p + '"]');
-    if (nv && !nv.dataset.r.includes(ROLE)) p = "akses";
+    if (nv && !nv.dataset.r.includes(ROLE)) {
+      const need = nv.dataset.r;
+      p = "akses";
+      WANT = want;
+      $('#p-akses [data-login="s"]').hidden = !need.includes("s");
+      $('#p-akses [data-login="f"]').hidden = !need.includes("f");
+      $("#akses-msg").textContent =
+        need === "f"
+          ? "Halaman ini khusus fasilitator. Masuk dengan kode fasilitator untuk membukanya."
+          : need === "s"
+            ? "Halaman ini khusus siswa. Masuk sebagai siswa untuk membukanya."
+            : "Halaman ini dibatasi menurut peran. Masuk sebagai siswa atau fasilitator untuk membukanya.";
+    }
   }
+  if (location.hash !== "#" + want)
+    (location.hash ? history.pushState : history.replaceState).call(
+      history,
+      null,
+      "",
+      "#" + want,
+    );
   document
     .querySelectorAll(".pg")
     .forEach((x) => x.classList.toggle("on", x.id === "p-" + p));
@@ -634,6 +656,13 @@ function route(p) {
     .forEach((b) =>
       b.setAttribute("aria-current", b.dataset.go === p ? "page" : "false"),
     );
+  document.querySelectorAll(".nav-menu").forEach((menu) => {
+    menu.classList.toggle(
+      "current",
+      !!menu.querySelector('.l[aria-current="page"]'),
+    );
+    menu.open = false;
+  });
   const sec = document.getElementById("sec");
   if (sec)
     sec.textContent =
@@ -659,6 +688,15 @@ function route(p) {
       ? "auto"
       : "instant",
   });
+  if (moveFocus) {
+    const heading = document.querySelector(
+      `#p-${p} h1, #p-${p} h2, #p-${p} h3`,
+    );
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
+  }
   if (p === "kartu") kt();
   if (p === "lacak") trk();
   if (p === "asesmen") as();
@@ -1563,7 +1601,9 @@ async function rs() {
         result.pre_scores.length !== D.L.length ||
         result.post_scores.length !== D.L.length
       ) {
-        console.error("Hasil riset terbit memiliki format skor yang tidak valid.");
+        console.error(
+          "Hasil riset terbit memiliki format skor yang tidak valid.",
+        );
         continue;
       }
       const article = document.createElement("article");
@@ -1589,7 +1629,8 @@ async function rs() {
     }
     if (!root.childElementCount) {
       const message = document.createElement("p");
-      message.textContent = "Data hasil riset terbit belum memiliki format skor yang valid.";
+      message.textContent =
+        "Data hasil riset terbit belum memiliki format skor yang valid.";
       root.append(message);
     }
     return;
@@ -1695,7 +1736,8 @@ $("#sk")?.addEventListener("click", async () => {
       });
       if (error) throw error;
       $("#sm").value = "";
-      $("#so").textContent = "Terima kasih! Masukanmu terkirim ke tim peneliti.";
+      $("#so").textContent =
+        "Terima kasih! Masukanmu terkirim ke tim peneliti.";
       $("#so").className = "ok";
       say("Terima kasih atas masukanmu!");
     } catch (error) {
@@ -1795,29 +1837,34 @@ function fl() {
   if (filter) filter.onchange = fl;
 });
 if ($("#fq")) $("#fq").oninput = fl;
-if ($("#fx")) $("#fx").onclick = () => {
-  const c = (x) => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
-  dl(
-    "saran-green-ai.csv",
-    [["waktu", "jenis", "kategori", "peran", "nama", "pesan"].map(c).join(",")]
-      .concat(
-        (window.FL || []).map((x) =>
-          [
-            new Date(x.t).toISOString(),
-            x.jenis,
-            x.kat,
-            x.peran,
-            x.nama,
-            x.pesan,
-          ]
-            .map(c)
-            .join(","),
-        ),
-      )
-      .join("\n"),
-    "#sl",
-  );
-};
+if ($("#fx"))
+  $("#fx").onclick = () => {
+    const c = (x) => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
+    dl(
+      "saran-green-ai.csv",
+      [
+        ["waktu", "jenis", "kategori", "peran", "nama", "pesan"]
+          .map(c)
+          .join(","),
+      ]
+        .concat(
+          (window.FL || []).map((x) =>
+            [
+              new Date(x.t).toISOString(),
+              x.jenis,
+              x.kat,
+              x.peran,
+              x.nama,
+              x.pesan,
+            ]
+              .map(c)
+              .join(","),
+          ),
+        )
+        .join("\n"),
+      "#sl",
+    );
+  };
 const KODE_F = "sulur-hijau-2026",
   HR = [
     [
@@ -1947,7 +1994,16 @@ $("#ddn")?.addEventListener("click", async () => {
   $("#dlg").close();
   applyRole();
   say("Selamat datang, " + n + "!");
-  route(r === "f" ? "panduan" : "beranda");
+  const tgt =
+    WANT &&
+    document
+      .querySelector('.nav .l[data-go="' + WANT + '"]')
+      ?.dataset.r.includes(r)
+      ? WANT
+      : r === "f"
+        ? "panduan"
+        : "beranda";
+  route(tgt, true);
 });
 function lgs() {
   try {
@@ -2057,73 +2113,75 @@ function lgp() {
       }),
   );
 }
-if ($("#ga_s")) $("#ga_s").onclick = () => {
-  const v = (i) => $("#" + i).value.trim(),
-    e = {
-      t: Date.now(),
-      tg: v("ga_t"),
-      p: v("ga_p"),
-      i: +v("ga_i") || 0,
-      pr: v("ga_m"),
-      v: v("ga_v"),
-      c: v("ga_c"),
-      d: v("ga_d"),
-      b: v("ga_b"),
-    };
-  if (!e.tg) {
-    $("#ga_e").textContent = "Isi tugasnya dulu.";
-    return;
-  }
-  $("#ga_e").textContent = "";
-  const g = lgs();
-  g.push(e);
-  try {
-    localStorage.setItem("gall", JSON.stringify(g));
-  } catch (x) {}
-  ["ga_t", "ga_i", "ga_m", "ga_c", "ga_d", "ga_b"].forEach(
-    (i) => ($("#" + i).value = ""),
-  );
-  say("Catatan tersimpan.");
-  lgp();
-};
-if ($("#ga_x")) $("#ga_x").onclick = () => {
-  const c = (x) => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
-  dl(
-    "log-penggunaan-ai.csv",
-    [
+if ($("#ga_s"))
+  $("#ga_s").onclick = () => {
+    const v = (i) => $("#" + i).value.trim(),
+      e = {
+        t: Date.now(),
+        tg: v("ga_t"),
+        p: v("ga_p"),
+        i: +v("ga_i") || 0,
+        pr: v("ga_m"),
+        v: v("ga_v"),
+        c: v("ga_c"),
+        d: v("ga_d"),
+        b: v("ga_b"),
+      };
+    if (!e.tg) {
+      $("#ga_e").textContent = "Isi tugasnya dulu.";
+      return;
+    }
+    $("#ga_e").textContent = "";
+    const g = lgs();
+    g.push(e);
+    try {
+      localStorage.setItem("gall", JSON.stringify(g));
+    } catch (x) {}
+    ["ga_t", "ga_i", "ga_m", "ga_c", "ga_d", "ga_b"].forEach(
+      (i) => ($("#" + i).value = ""),
+    );
+    say("Catatan tersimpan.");
+    lgp();
+  };
+if ($("#ga_x"))
+  $("#ga_x").onclick = () => {
+    const c = (x) => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
+    dl(
+      "log-penggunaan-ai.csv",
       [
-        "tanggal",
-        "tugas",
-        "pakai_ai",
-        "interaksi",
-        "prompt",
-        "verifikasi",
-        "cara",
-        "dipakai_diubah_ditolak",
-        "alasan_berhenti",
-      ].join(","),
-    ]
-      .concat(
-        lgs().map((x) =>
-          [
-            new Date(x.t).toISOString().slice(0, 10),
-            x.tg,
-            x.p,
-            x.i,
-            x.pr,
-            x.v,
-            x.c,
-            x.d,
-            x.b,
-          ]
-            .map(c)
-            .join(","),
-        ),
-      )
-      .join("\n"),
-    "#ga_e",
-  );
-};
+        [
+          "tanggal",
+          "tugas",
+          "pakai_ai",
+          "interaksi",
+          "prompt",
+          "verifikasi",
+          "cara",
+          "dipakai_diubah_ditolak",
+          "alasan_berhenti",
+        ].join(","),
+      ]
+        .concat(
+          lgs().map((x) =>
+            [
+              new Date(x.t).toISOString().slice(0, 10),
+              x.tg,
+              x.p,
+              x.i,
+              x.pr,
+              x.v,
+              x.c,
+              x.d,
+              x.b,
+            ]
+              .map(c)
+              .join(","),
+          ),
+        )
+        .join("\n"),
+      "#ga_e",
+    );
+  };
 function rk() {
   $("#ab").innerHTML =
     '<p>Tempel kode laporan siswa (satu atau banyak, dari email, WhatsApp, atau Classroom). Data diproses di perangkatmu dan tidak dikirim ke mana pun.</p><textarea id="rkt" rows="5" aria-label="Kode laporan siswa" style="width:100%;padding:12px;border-radius:12px;border:2px solid var(--ln);background:var(--sf);color:var(--ink);font:inherit"></textarea><div class="row"><button class="btn" id="rkb" type="button">Proses</button><select id="rkf" aria-label="Filter kelas"><option value="">Semua kelas</option></select><button class="btn o" id="rkx" type="button">Unduh CSV</button></div><div class="err" id="rke" role="alert"></div><div id="rkr" style="overflow-x:auto"></div>';
@@ -2332,7 +2390,7 @@ function cv() {
         x.arc(
           (i * 0.2 + 0.1) * W,
           H * 0.5,
-          H * 0.18 + Math.sin(f / 60 + i) * 6,
+          Math.max(0, H * 0.18 + Math.sin(f / 60 + i) * 6),
           0,
           7,
         );
@@ -2361,3 +2419,7 @@ hr();
 cv();
 navs();
 route(location.hash.slice(1) || "beranda");
+addEventListener("popstate", () => {
+  const h = location.hash.slice(1);
+  if (PG.includes(h)) route(h);
+});

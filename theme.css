@@ -67,6 +67,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.skip {
+  position: fixed;
+  z-index: 50;
+  top: calc(env(safe-area-inset-top, 0px) + 0.75rem);
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--ink);
+  color: var(--bg);
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform 160ms ease;
+}
+
+.skip:focus-visible {
+  transform: translateY(0);
+}
+
 ::selection {
   background: var(--ink);
   color: var(--bg);
@@ -98,7 +114,7 @@ body :focus-visible {
   min-height: 4.1rem;
   gap: 1rem;
   padding: 0 clamp(1.15rem, 4vw, 2rem);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .nav .lg {
@@ -139,6 +155,91 @@ body :focus-visible {
 
 .nol-nav::-webkit-scrollbar {
   display: none;
+}
+
+.nav-menu {
+  position: relative;
+  flex: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.nol-nav > .l[data-go="beranda"] {
+  order: -1;
+}
+
+.nav-menu summary {
+  display: flex;
+  height: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0 0.65rem;
+  color: var(--mu);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 400;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.nav-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-menu summary::after {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: -0.2rem 0 0 0.55rem;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+.nav-menu[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.nav-menu summary:hover,
+.nav-menu.current summary,
+.nav-menu[open] summary {
+  color: var(--ink);
+}
+
+.nav-menu.current summary {
+  font-weight: 500;
+}
+
+.nav-menu-items {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  display: none;
+  min-width: 13rem;
+  padding: 0.4rem;
+  background: var(--sf);
+}
+
+.nav-menu[open] .nav-menu-items {
+  display: grid;
+}
+
+.nav-menu-items .l {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.nav-menu-items .l[aria-current="page"] {
+  background: var(--lm);
+  color: var(--g);
 }
 
 .nav .l,
@@ -1090,11 +1191,25 @@ th {
   .nol-nav {
     width: 100%;
     flex: 1 0 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.15rem;
     margin: 0;
     padding-block: 0.15rem;
     overflow: visible;
+    justify-content: space-between;
+  }
+
+  .nav-menu summary {
+    padding-inline: 0.45rem;
+    font-size: 0.86rem;
+  }
+
+  .nav-menu summary::after {
+    margin-left: 0.4rem;
+  }
+
+  .nav-menu-items {
+    min-width: min(13rem, calc(100vw - 2rem));
   }
 
   .nav .l,
