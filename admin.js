@@ -38,6 +38,35 @@
     status.dataset.error = String(isError);
   }
 
+  function isMissingTableError(error) {
+    return (
+      error?.code === "PGRST205" ||
+      /Could not find the table 'public\.(site_content|research_results)' in the schema cache/i.test(
+        error?.message || "",
+      )
+    );
+  }
+
+  function getErrorMessage(error) {
+    const message = error?.message || "Operasi gagal.";
+    if (isMissingTableError(error)) {
+      return "Tabel Supabase belum tersedia. Jalankan supabase-schema.sql di SQL Editor proyek Supabase.";
+    }
+    if (
+      error?.code === "invalid_credentials" ||
+      /invalid login credentials/i.test(message)
+    ) {
+      return "Email atau kata sandi salah. Pastikan akun sudah dibuat dan emailnya telah dikonfirmasi.";
+    }
+    if (
+      error?.code === "email_not_confirmed" ||
+      /email not confirmed/i.test(message)
+    ) {
+      return "Konfirmasi email akun admin sebelum masuk.";
+    }
+    return message;
+  }
+
   function clearList(target, message) {
     target.replaceChildren();
     const empty = document.createElement("p");
@@ -72,7 +101,8 @@
       .order("created_at", { ascending: true });
 
     if (error) {
-      console.error("Gagal memuat konten terbitan:", error.message);
+      const log = isMissingTableError(error) ? console.warn : console.error;
+      log.call(console, "Gagal memuat konten terbitan:", getErrorMessage(error));
       return;
     }
 
@@ -257,7 +287,7 @@
     try {
       await Promise.all([loadContent(), loadFeedback(), loadResearch()]);
     } catch (error) {
-      setStatus(`Gagal memuat dashboard: ${error.message}`, true);
+      setStatus(`Gagal memuat dashboard: ${getErrorMessage(error)}`, true);
     }
   }
 
@@ -293,7 +323,7 @@
     if (error) {
       login.hidden = false;
       dashboard.hidden = true;
-      setStatus(`Gagal memverifikasi role: ${error.message}`, true);
+      setStatus(`Gagal memverifikasi role: ${getErrorMessage(error)}`, true);
       return;
     }
     if (profile?.role !== "super_admin") {
@@ -313,25 +343,31 @@
     try {
       await action();
     } catch (error) {
-      setStatus(error.message || "Operasi gagal.", true);
+      setStatus(getErrorMessage(error), true);
     }
   }
 
-  $("#admin-login-form").addEventListener("submit", (event) => {
+  $("#admin-login-form").addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!client) {
       setStatus("Supabase belum dikonfigurasi.", true);
       return;
     }
-    handle(async () => {
-      setStatus("Sedang masuk...");
-      const { error } = await client.auth.signInWithPassword({
-        email: $("#admin-email").value.trim(),
-        password: $("#admin-password").value,
+    const submit = event.currentTarget.querySelector('[type="submit"]');
+    submit.disabled = true;
+    try {
+      await handle(async () => {
+        setStatus("Sedang masuk...");
+        const { error } = await client.auth.signInWithPassword({
+          email: $("#admin-email").value.trim(),
+          password: $("#admin-password").value,
+        });
+        if (error) throw error;
+        $("#admin-password").value = "";
       });
-      if (error) throw error;
-      $("#admin-password").value = "";
-    });
+    } finally {
+      submit.disabled = false;
+    }
   });
 
   $("#admin-logout").addEventListener("click", () => {

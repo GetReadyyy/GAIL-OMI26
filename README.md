@@ -2,11 +2,16 @@
 
 ## Setup Supabase
 
-1. Buat proyek Supabase dan aktifkan Email/Password di Authentication.
-2. Buat akun admin melalui Supabase Authentication.
-3. Ganti `GANTI_DENGAN_EMAIL_SUPER_ADMIN` di bagian akhir `supabase-schema.sql` dengan email akun tersebut, lalu jalankan seluruh SQL melalui SQL Editor Supabase.
-4. Isi `url` dan `anonKey` di `supabase-config.js` menggunakan Project URL dan publishable/anon key dari pengaturan proyek. Jangan pernah masukkan service-role key ke frontend.
-5. Jalankan situs melalui server lokal atau hosting statis. Dashboard Admin akan muncul setelah login jika profil pengguna memiliki role `super_admin`.
+1. Buat proyek Supabase, aktifkan Email/Password di Authentication, lalu buat dan konfirmasi akun admin.
+2. Ganti `GANTI_DENGAN_EMAIL_SUPER_ADMIN` di bagian akhir `supabase-schema.sql` dengan email akun tersebut. Jalankan seluruh isi SQL melalui SQL Editor Supabase untuk membuat tabel, kebijakan akses, dan role super admin.
+3. Isi `url` dan `anonKey` di `supabase-config.js` menggunakan Project URL dan publishable/anon key dari pengaturan proyek. Jangan pernah masukkan service-role key ke frontend.
+4. Jalankan situs melalui server lokal atau hosting statis. Dashboard Admin akan muncul setelah login jika profil pengguna memiliki role `super_admin`.
+
+### Pemecahan masalah Supabase
+
+- `PGRST205` atau `Could not find the table ... in the schema cache`: jalankan `supabase-schema.sql`. Jika tabel sudah ada, jalankan `notify pgrst, 'reload schema';` melalui SQL Editor untuk memuat ulang schema cache.
+- Error `Invalid login credentials` (HTTP 400): pastikan email dan kata sandi benar, akun sudah dibuat di proyek yang sama, serta email akun sudah dikonfirmasi.
+- Error `Email not confirmed`: konfirmasi email akun admin melalui tautan dari Supabase sebelum login.
 
 Dashboard mengelola blok konten teks yang diterbitkan pada halaman, masukan pengguna, dan hasil riset. Konten yang sudah tertanam di halaman tidak dihapus atau diganti; blok terbitan ditambahkan setelah konten halaman. Progres siswa tetap tersimpan lokal di perangkat.
 

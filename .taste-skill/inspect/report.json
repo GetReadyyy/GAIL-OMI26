@@ -1,0 +1,1711 @@
+{
+ "url": "index.html",
+ "at": "2026-11-02T08:09:43.605Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.34,
+    0.22,
+    0.18
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 3,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2070,
+     "screens": 2.3,
+     "words": 274,
+     "img": 2,
+     "video": 0,
+     "canvas": 1,
+     "svg": 1,
+     "sections": 21,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Satu prompt, banyak dampak.",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 86.4,
+     "vw": 6,
+     "font": "Fraunces",
+     "weight": 500,
+     "tracking": -0.035,
+     "leading": 0.92,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.51,
+     "top": 304,
+     "mixedFonts": [
+      "Fraunces",
+      "Fraunces italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Satu prompt, banyak dampak.",
+     "words": 4,
+     "lines": 2,
+     "size": 86.4,
+     "font": "Fraunces"
+    },
+    "headings": [
+     {
+      "text": "Perjalanan satu prompt",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 34.4,
+      "vw": 2.4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 228,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Satu prompt, banyak dampak.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 86.4,
+      "vw": 6,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 0.92,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 304,
+      "mixedFonts": [
+       "Fraunces",
+       "Fraunces italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "32",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 920,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "5",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.3,
+      "top": 920,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "3 + 14",
+      "words": 3,
+      "chars": 6,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.3,
+      "top": 920,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Pilih jalurmu",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1066,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Perjalananmu",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1278,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "0/5",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 1376,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Belum",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 1376,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0/14",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 1376,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0/4",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 52.8,
+      "vw": 3.7,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.23,
+      "top": 1376,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Mulai petualanganmu",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1522,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 1
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 0.49,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.33,
+       "mono": false
+      },
+      {
+       "family": "Fraunces",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      25,
+      50,
+      53,
+      86
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14.4,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0.04,
+      "contrast": 8.1
+     },
+     "measureChars": 126,
+     "max": {
+      "size": 86.4,
+      "vw": 6,
+      "font": "Fraunces",
+      "text": "Satu prompt,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.002,
+     "microSamples": [
+      "Awal"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.44,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "MAN IC Padang Pariaman · OMI Riset 2026",
+      "above": "Satu prompt, banyak dampak.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 16.8,
+      "top": 261
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0c1a14",
+     "bodyBgHsl": {
+      "h": 154,
+      "s": 0.37,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#eee9d8",
+       "share": 0.59
+      },
+      {
+       "color": "#a2b3a5",
+       "share": 0.24
+      },
+      {
+       "color": "#b7c8b9",
+       "share": 0.15
+      },
+      {
+       "color": "#0c1a14",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#eee9d8",
+      "hsl": {
+       "h": 46,
+       "s": 0.39,
+       "l": 0.89
+      },
+      "fg": "#0c1a14"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Lewati ke konten",
+      "Masuk",
+      "Kirim prompt"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "aside.hero-aside → linear-gradient(to right, color(srgb 0.933333 0.913725 0.847059 / 0.09) 1px, rgba(0, 0, 0, 0) 1px), linear-gra"
+     ],
+     "gradientText": 0,
+     "hairlines": 27,
+     "hairlineSamples": [
+      "header.nav 1424px",
+      "div.ticker 1424px",
+      "div.stats 1360px",
+      "div.rv.in 453px",
+      "div.rv.in 453px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.75
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 67,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "fraunces",
+     "ibm plex sans"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 1280,
+   "height": 800,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.44,
+    0.22,
+    0.21
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 3,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1280,
+     "h": 800
+    },
+    "page": {
+     "height": 2062,
+     "screens": 2.6,
+     "words": 274,
+     "img": 2,
+     "video": 0,
+     "canvas": 1,
+     "svg": 1,
+     "sections": 21,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Satu prompt, banyak dampak.",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 79.4,
+     "vw": 6.2,
+     "font": "Fraunces",
+     "weight": 500,
+     "tracking": -0.035,
+     "leading": 0.92,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.51,
+     "top": 309,
+     "mixedFonts": [
+      "Fraunces",
+      "Fraunces italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Satu prompt, banyak dampak.",
+     "words": 4,
+     "lines": 2,
+     "size": 79.4,
+     "font": "Fraunces"
+    },
+    "headings": [
+     {
+      "text": "Perjalanan satu prompt",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 30.7,
+      "vw": 2.4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 225,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Satu prompt, banyak dampak.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 79.4,
+      "vw": 6.2,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 0.92,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 309,
+      "mixedFonts": [
+       "Fraunces",
+       "Fraunces italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "32",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 907,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "5",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.3,
+      "top": 907,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "3 + 14",
+      "words": 3,
+      "chars": 6,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.3,
+      "top": 907,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Pilih jalurmu",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.9,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1052,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Perjalananmu",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.9,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1263,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "0/5",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 1361,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Belum",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 1361,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0/14",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 1361,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0/4",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.22,
+      "top": 1361,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Mulai petualanganmu",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 50.4,
+      "vw": 3.9,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.46,
+      "top": 1506,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 1
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 0.49,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.33,
+       "mono": false
+      },
+      {
+       "family": "Fraunces",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      25,
+      50,
+      51,
+      79
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14.4,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0.04,
+      "contrast": 8.1
+     },
+     "measureChars": 126,
+     "max": {
+      "size": 79.4,
+      "vw": 6.2,
+      "font": "Fraunces",
+      "text": "Satu prompt,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 1,
+     "microLabelShare": 0.002,
+     "microSamples": [
+      "Awal"
+     ],
+     "upperShare": 0.02,
+     "centerShare": 0.44,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "MAN IC Padang Pariaman · OMI Riset 2026",
+      "above": "Satu prompt, banyak dampak.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 16.8,
+      "top": 266
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0c1a14",
+     "bodyBgHsl": {
+      "h": 154,
+      "s": 0.37,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#eee9d8",
+       "share": 0.59
+      },
+      {
+       "color": "#a2b3a5",
+       "share": 0.24
+      },
+      {
+       "color": "#b7c8b9",
+       "share": 0.15
+      },
+      {
+       "color": "#0c1a14",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#eee9d8",
+      "hsl": {
+       "h": 46,
+       "s": 0.39,
+       "l": 0.89
+      },
+      "fg": "#0c1a14"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Lewati ke konten",
+      "Masuk",
+      "Kirim prompt"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "aside.hero-aside → linear-gradient(to right, color(srgb 0.933333 0.913725 0.847059 / 0.09) 1px, rgba(0, 0, 0, 0) 1px), linear-gra"
+     ],
+     "gradientText": 0,
+     "hairlines": 27,
+     "hairlineSamples": [
+      "header.nav 1264px",
+      "div.ticker 1264px",
+      "div.stats 1200px",
+      "div.rv.in 400px",
+      "div.rv.in 400px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.83
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 67,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "fraunces",
+     "ibm plex sans"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.43,
+    0.21,
+    0.19
+   ],
+   "motion": {
+    "elements": 11,
+    "css": 3,
+    "transitions": 8,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1024,
+     "h": 768
+    },
+    "page": {
+     "height": 1980,
+     "screens": 2.6,
+     "words": 273,
+     "img": 2,
+     "video": 0,
+     "canvas": 1,
+     "svg": 1,
+     "sections": 21,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 1,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Satu prompt, banyak dampak.",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 63.5,
+     "vw": 6.2,
+     "font": "Fraunces",
+     "weight": 500,
+     "tracking": -0.035,
+     "leading": 0.92,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.5,
+     "top": 314,
+     "mixedFonts": [
+      "Fraunces",
+      "Fraunces italic"
+     ],
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Satu prompt, banyak dampak.",
+     "words": 4,
+     "lines": 2,
+     "size": 63.5,
+     "font": "Fraunces"
+    },
+    "headings": [
+     {
+      "text": "Satu prompt, banyak dampak.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 63.5,
+      "vw": 6.2,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 0.92,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.5,
+      "top": 314,
+      "mixedFonts": [
+       "Fraunces",
+       "Fraunces italic"
+      ],
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "32",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 869,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "5",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.29,
+      "top": 869,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "3 + 14",
+      "words": 3,
+      "chars": 6,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.29,
+      "top": 869,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Pilih jalurmu",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1026,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Perjalananmu",
+      "words": 1,
+      "chars": 12,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1222,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "0/5",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 1306,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Belum",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 1306,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0/14",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 1306,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "0/4",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 1306,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Mulai petualanganmu",
+      "words": 2,
+      "chars": 19,
+      "lines": 1,
+      "size": 41,
+      "vw": 4,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 1441,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 1
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 0.49,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.33,
+       "mono": false
+      },
+      {
+       "family": "Fraunces",
+       "share": 0.19,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      25,
+      41,
+      64
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14.4,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0.04,
+      "contrast": 8.1
+     },
+     "measureChars": 126,
+     "max": {
+      "size": 63.5,
+      "vw": 6.2,
+      "font": "Fraunces",
+      "text": "Satu prompt,"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.45,
+     "smallText": 0
+    },
+    "eyebrows": [
+     {
+      "text": "MAN IC Padang Pariaman · OMI Riset 2026",
+      "above": "Satu prompt, banyak dampak.",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 16.8,
+      "top": 271
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#0c1a14",
+     "bodyBgHsl": {
+      "h": 154,
+      "s": 0.37,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [],
+     "textColors": [
+      {
+       "color": "#eee9d8",
+       "share": 0.59
+      },
+      {
+       "color": "#a2b3a5",
+       "share": 0.24
+      },
+      {
+       "color": "#b7c8b9",
+       "share": 0.15
+      },
+      {
+       "color": "#0c1a14",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#eee9d8",
+      "hsl": {
+       "h": 46,
+       "s": 0.39,
+       "l": 0.89
+      },
+      "fg": "#0c1a14"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 3,
+     "radius": 0,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Lewati ke konten",
+      "Masuk",
+      "Kirim prompt"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 1,
+     "scrims": 0,
+     "gradientSamples": [
+      "aside.hero-aside → linear-gradient(to right, color(srgb 0.933333 0.913725 0.847059 / 0.09) 1px, rgba(0, 0, 0, 0) 1px), linear-gra"
+     ],
+     "gradientText": 0,
+     "hairlines": 23,
+     "hairlineSamples": [
+      "header.nav 1008px",
+      "div.ticker 1008px",
+      "div.stats 944px",
+      "div.rv.in 315px",
+      "div.rv.in 315px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.84
+     }
+    ],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 67,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "fraunces",
+     "ibm plex sans"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "mixed-font-headline",
+   "width": 1440,
+   "message": "1 headline(s) switch typeface or to italic mid-line (the \"one italic serif word\" move).",
+   "fix": "Set the whole headline in one face. Emphasis comes from the words.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"MAN IC Padang Pariaman · OMI Riset 2026\" above \"Satu prompt, banyak dampak.\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "1 tiny uppercase letter-spaced label(s): \"Awal\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    1280
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "1 gradient fill(s): aside.hero-aside → linear-gradient(to right, color(srgb 0.933333 0.913725 0.847059 / 0.09) 1px, rgba(0, 0, 0, 0) 1px), linear-gra",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "27 thin rule(s)/divider line(s): header.nav 1424px | div.ticker 1424px | div.stats 1360px | div.rv.in 453px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 1440,
+   "message": "Yellow-cream background (button #eee9d8, text #eee9d8).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-count",
+   "width": 1440,
+   "message": "3 typefaces in use (IBM Plex Sans, Arial, Fraunces).",
+   "fix": "Two at most.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "11 different font sizes (11, 13, 14, 15, 16, 17, 22, 25, 50, 53, 86).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    1280
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 14.4px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step.",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 1 picture(s) on the page (0 photographs, footage or raster images, 1 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve.",
+   "alsoAt": [
+    1280
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject.",
+   "alsoAt": [
+    1280
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 126 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch).",
+   "alsoAt": [
+    1280,
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 11 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph.",
+   "alsoAt": [
+    1280
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "D:\\arkan\\MANIC\\mapel\\KODING AI\\code\\GAIL\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\arkan\\MANIC\\mapel\\KODING AI\\code\\GAIL\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "desktop",
+   "width": 1280,
+   "fold": "D:\\arkan\\MANIC\\mapel\\KODING AI\\code\\GAIL\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "D:\\arkan\\MANIC\\mapel\\KODING AI\\code\\GAIL\\.taste-skill\\inspect\\desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 1024,
+   "fold": "D:\\arkan\\MANIC\\mapel\\KODING AI\\code\\GAIL\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "D:\\arkan\\MANIC\\mapel\\KODING AI\\code\\GAIL\\.taste-skill\\inspect\\tablet-page-01.jpg"
+   ]
+  }
+ ]
+}

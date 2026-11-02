@@ -1,6 +1,6 @@
 window.GAIL_SUPABASE_CONFIG = {
-  url: "",
-  anonKey: "",
+  url: "https://xwmaafazjkazmyggajlg.supabase.co",
+  anonKey: "sb_publishable_NeruDKBIVkZin9gGcYdphA_dEOIhJeO",
 };
 
 const { url, anonKey } = window.GAIL_SUPABASE_CONFIG;

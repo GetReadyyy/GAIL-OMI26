@@ -123,3 +123,5 @@ select id, 'super_admin'
 from auth.users
 where email = 'GANTI_DENGAN_EMAIL_SUPER_ADMIN'
 on conflict (id) do update set role = excluded.role;
+
+notify pgrst, 'reload schema';
