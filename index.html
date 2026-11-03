@@ -302,99 +302,213 @@
           <div class="w">
             <div class="hero-grid">
               <div class="hero-copy">
-                <p class="kicker">MAN IC Padang Pariaman · OMI Riset 2026</p>
-                <h1>Satu prompt,<span>banyak dampak.</span></h1>
+                <h1>Satu prompt, banyak dampak.</h1>
                 <p class="mu">
                   Pahami jejak AI dan gunakan saat benar-benar membantu belajar.
                 </p>
-                <form class="ask" id="ask">
-                  <input
-                    id="q"
-                    aria-label="Pertanyaan untuk AI"
-                    placeholder="Contoh: jelaskan fotosintesis"
-                  /><button class="btn" type="submit">Kirim prompt</button>
-                </form>
+                <p class="hero-context">MAN IC Padang Pariaman · OMI Riset 2026</p>
+                <a class="btn hero-action" href="#simulasi">Coba simulasi</a>
               </div>
-              <aside class="hero-aside" data-ui aria-labelledby="chain-title">
-                <h2 id="chain-title">Perjalanan satu prompt</h2>
-                <div class="chain" id="chain" aria-hidden="true"></div>
-                <div id="cap" role="status" aria-live="polite">
-                  Kirim satu prompt untuk melihat rantainya.
-                </div>
-                <p>
-                  Dampak berbeda menurut model, lokasi, sumber listrik,
-                  pendinginan, dan jenis tugas. Tidak ada angka mutlak.
-                </p>
-              </aside>
             </div>
           </div>
         </section>
-        <div class="ticker" aria-hidden="true">
-          <div class="ticker-track">
-            <p>
-              Get Awareness <span>·</span> Recognize Impact
-              <span>·</span> Evaluate Need <span>·</span> Execute Efficient Use
-              <span>·</span> Nurture Sustainable Habits <span>·</span>
-            </p>
-            <p>
-              Get Awareness <span>·</span> Recognize Impact
-              <span>·</span> Evaluate Need <span>·</span> Execute Efficient Use
-              <span>·</span> Nurture Sustainable Habits <span>·</span>
-            </p>
+        <section class="prompt-section" id="simulasi" aria-labelledby="chain-title">
+          <div class="w simulator-layout">
+            <div class="simulator-copy">
+              <h2 id="chain-title">Lihat jejak di balik prompt</h2>
+              <p>
+                Masukkan pertanyaan dan ikuti proses yang dilalui AI, dari
+                pemrosesan sampai dampak yang bergantung pada konteks.
+              </p>
+              <form class="ask" id="ask">
+                <label class="sr-only" for="q">Contoh prompt</label>
+                <input
+                  id="q"
+                  placeholder="Contoh: jelaskan fotosintesis"
+                /><button class="btn" type="submit">Jalankan simulasi</button>
+              </form>
+            </div>
+            <aside class="hero-aside" data-ui aria-label="Simulasi perjalanan prompt">
+              <div class="chain" id="chain" aria-hidden="true"></div>
+              <div id="cap" role="status" aria-live="polite">
+                Kirim satu prompt untuk melihat rantainya.
+              </div>
+              <p>
+                Dampak berbeda menurut model, lokasi, sumber listrik,
+                pendinginan, dan jenis tugas. Tidak ada angka mutlak.
+              </p>
+            </aside>
           </div>
-        </div>
-        <section>
+        </section>
+        <section class="about-section" id="tentang-gail" aria-labelledby="about-title">
+          <div class="w about-layout">
+            <div class="about-copy">
+              <h2 id="about-title">Tentang Green AI Literacy</h2>
+              <p>
+                Green AI Literacy (GAIL) membantu siswa memahami jejak
+                lingkungan AI dan memutuskan kapan serta bagaimana teknologi
+                ini berguna untuk belajar.
+              </p>
+              <p>
+                Program riset di MAN Insan Cendekia Padang Pariaman ini
+                menggabungkan literasi AI, pertimbangan dampak, dan kebiasaan
+                penggunaan yang lebih sadar.
+              </p>
+              <button class="text-link" data-go="tentang">
+                Tentang produk penelitian
+              </button>
+            </div>
+            <div class="about-evidence">
+              <svg
+                class="about-diagram"
+                viewBox="0 0 520 230"
+                role="img"
+                aria-labelledby="about-diagram-title about-diagram-desc"
+              >
+                <title id="about-diagram-title">Siklus perhatian GAIL</title>
+                <desc id="about-diagram-desc">
+                  Prompt diproses oleh model, menggunakan sumber daya, lalu
+                  dampaknya dipertimbangkan sebelum memilih tindakan.
+                </desc>
+                <path d="M75 112H445" fill="none" stroke="currentColor" stroke-width="3" />
+                <path d="m431 98 14 14-14 14" fill="none" stroke="currentColor" stroke-width="3" />
+                <circle cx="75" cy="112" r="38" fill="var(--deep)" />
+                <circle cx="260" cy="112" r="38" fill="var(--deep)" />
+                <circle cx="445" cy="112" r="38" fill="var(--g2)" />
+                <path d="M61 112h28m-14-14v28M246 112h28m-14-14v28" stroke="var(--deep-ink)" stroke-width="3" />
+                <path d="M433 112h24m-12-12v24" stroke="var(--deep-ink)" stroke-width="3" />
+                <text x="75" y="178" text-anchor="middle">Prompt</text>
+                <text x="260" y="178" text-anchor="middle">Proses</text>
+                <text x="445" y="178" text-anchor="middle">Dampak</text>
+              </svg>
+              <dl class="about-facts">
+                <div><dt>32 siswa</dt><dd>terlibat dalam observasi awal</dd></div>
+                <div><dt>5 tahap</dt><dd>membentuk siklus G-R-E-E-N</dd></div>
+                <div><dt>3 sesi</dt><dd>masing-masing berlangsung 120 menit</dd></div>
+              </dl>
+            </div>
+          </div>
+        </section>
+        <section class="path-section" id="jalur" aria-labelledby="path-title">
           <div class="w">
-            <div class="stats">
-              <div>
-                <b>32</b>murid MAN IC Padang Pariaman dalam observasi awal
-              </div>
-              <div><b>5</b>tahap G-R-E-E-N yang berputar</div>
-              <div><b>3 + 14</b>sesi 120 menit, lalu cek ulang 14 hari</div>
+            <div class="section-heading">
+              <h2 id="path-title">Pilih jalurmu</h2>
+              <p>Mulai dari peran dan cara belajar yang paling sesuai.</p>
             </div>
-            <h2>Pilih jalurmu</h2>
-            <div class="tiles">
-              <button data-login="s">
-                <b>Saya siswa</b>Misi lengkap, kartu, pelacak, log AI, dan skala</button
-              ><button data-login="f">
-                <b>Saya fasilitator</b>Panduan sesi, rubrik, dan rekap kelas</button
-              ><button data-go="misi">
-                <b>Coba tanpa masuk</b>Level 1 dan 2 terbuka untuk tamu
+            <svg
+              class="path-branch"
+              viewBox="0 0 1000 100"
+              role="img"
+              aria-labelledby="path-branch-title path-branch-desc"
+            >
+              <title id="path-branch-title">Tiga jalur belajar GAIL</title>
+              <desc id="path-branch-desc">
+                Pengunjung dapat memilih jalur siswa, fasilitator, atau mencoba
+                misi tanpa masuk.
+              </desc>
+              <circle cx="80" cy="50" r="12" />
+              <path d="M92 50h168c120 0 120-38 240-38h408" />
+              <path d="M92 50h816" />
+              <path d="M92 50h168c120 0 120 38 240 38h408" />
+              <circle cx="908" cy="12" r="12" />
+              <circle cx="908" cy="50" r="12" />
+              <circle cx="908" cy="88" r="12" />
+            </svg>
+            <div class="tiles path-tiles">
+              <button class="path-card path-student" data-login="s">
+                <span class="path-card-copy">
+                  <b>Saya siswa</b>
+                  <span>Misi, kartu komitmen, pelacak, log AI, dan asesmen.</span>
+                  <span class="path-card-action">Masuk sebagai siswa <span aria-hidden="true">→</span></span>
+                </span>
+              </button>
+              <button class="path-card path-facilitator" data-login="f">
+                <span class="path-card-copy">
+                  <b>Saya fasilitator</b>
+                  <span>Panduan sesi, rubrik, dan rekap kelas.</span>
+                  <span class="path-card-action">Masuk sebagai fasilitator <span aria-hidden="true">→</span></span>
+                </span>
+              </button>
+              <button class="path-card path-guest" data-go="misi">
+                <span class="path-card-copy">
+                  <b>Coba tanpa masuk</b>
+                  <span>Mulai misi terbuka untuk mengenal GAIL.</span>
+                  <span class="path-card-action">Lihat misi <span aria-hidden="true">→</span></span>
+                </span>
               </button>
             </div>
-            <h2 style="margin-top: 40px">Perjalananmu</h2>
-            <div class="stats" id="pj"></div>
-            <h2>Mulai petualanganmu</h2>
-            <div class="tiles">
-              <button data-go="model">
-                <b>Pelajari model</b>Lima tahap G-R-E-E-N dan target SDG</button
-              ><button data-go="lab">
-                <b>Laboratorium</b>Ubah kondisi, lihat arah dampaknya</button
-              ><button data-go="misi">
-                <b>Misi Penjaga Jejak</b>Lima level. Tiap level terbuka setelah
-                level sebelumnya selesai</button
-              ><button data-go="kartu">
-                <b>Kartu Komitmen</b>Terbuka setelah semua level selesai. Terisi
-                otomatis</button
-              ><button data-go="lacak">
-                <b>Pelacak 14 hari</b>Tandai harian secara berurutan</button
-              ><button data-go="log">
-                <b>Log penggunaan AI</b>Catat tiap tugas dan lihat polanya</button
-              ><button data-go="panduan">
-                <b>Panduan fasilitator</b>Gambaran model, sesi, dan rambu</button
-              ><button data-go="asesmen">
-                <b>Toolkit asesmen</b>Skala, rubrik guru, dan kirim laporan ke
-                guru</button
-              ><button data-go="riset">
-                <b>Hasil riset</b>Data pretest-posttest dan dokumentasi</button
-              ><button data-go="saran">
-                <b>Saran</b>Kirim masukan untuk tim peneliti</button
-              ><button data-go="tentang">
-                <b>Tentang</b>Produk penelitian, tim, dan panduan guru
-              </button>
+            <div class="home-progress" id="home-progress" hidden>
+              <h3>Perjalananmu</h3>
+              <div class="stats" id="pj"></div>
             </div>
           </div>
         </section>
+        <section class="how-section" id="cara-kerja" aria-labelledby="how-title">
+          <div class="w">
+            <div class="section-heading">
+              <h2 id="how-title">Dari sadar sampai menjadi kebiasaan</h2>
+              <p>Lima tahap membimbing siswa dari mengenali dampak hingga membangun kebiasaan.</p>
+            </div>
+            <div class="green-cycle">
+              <svg viewBox="0 0 1000 80" aria-hidden="true" focusable="false">
+                <path d="M80 40H920" />
+                <path d="m905 25 15 15-15 15" />
+                <circle cx="80" cy="40" r="10" />
+                <circle cx="290" cy="40" r="10" />
+                <circle cx="500" cy="40" r="10" />
+                <circle cx="710" cy="40" r="10" />
+                <circle cx="920" cy="40" r="10" />
+              </svg>
+              <ol class="green-steps">
+                <li><b>Get Awareness</b><span>Sadari peran AI dalam belajar.</span></li>
+                <li><b>Recognize Impact</b><span>Kenali jejak dan dampaknya.</span></li>
+                <li><b>Evaluate Need</b><span>Timbang apakah AI diperlukan.</span></li>
+                <li><b>Execute Efficient Use</b><span>Gunakan dan periksa hasilnya.</span></li>
+                <li><b>Nurture Sustainable Habits</b><span>Rawat kebiasaan yang bertanggung jawab.</span></li>
+              </ol>
+            </div>
+            <p class="program-rhythm">
+              Pembelajaran berlangsung dalam tiga sesi, dilanjutkan tugas mandiri
+              dan cek ulang kebiasaan pada hari ke-14.
+            </p>
+          </div>
+        </section>
+        <section class="features-section" id="fitur" aria-labelledby="features-title">
+          <div class="w">
+            <div class="section-heading">
+              <h2 id="features-title">Fitur lainnya</h2>
+              <p>Jelajahi materi, latihan, dan alat pendamping dalam satu tempat.</p>
+            </div>
+            <div class="feature-list">
+              <button data-go="model"><span><b>Model G-R-E-E-N</b><small>Lima tahap literasi AI yang saling terhubung.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="lab"><span><b>Laboratorium konteks</b><small>Ubah kondisi dan amati arah dampaknya.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="misi"><span><b>Misi Penjaga Jejak</b><small>Latihan bertahap dari kasus ke kebiasaan.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="kartu"><span><b>Kartu Komitmen</b><small>Rencana kebiasaan setelah misi selesai.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="lacak"><span><b>Pelacak 14 hari</b><small>Catat konsistensi kebiasaan harian.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="log"><span><b>Log penggunaan AI</b><small>Catat tugas, bantuan AI, dan verifikasi.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="panduan"><span><b>Panduan fasilitator</b><small>Alur sesi, aktivitas, dan rambu kelas.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="asesmen"><span><b>Toolkit asesmen</b><small>Instrumen refleksi dan rubrik pembelajaran.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="riset"><span><b>Hasil riset</b><small>Informasi hasil dan dokumentasi penelitian.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="saran"><span><b>Saran dan masukan</b><small>Kirim masukan kepada tim peneliti.</small></span><span aria-hidden="true">→</span></button>
+              <button data-go="tentang"><span><b>Tentang produk</b><small>Kenali produk dan tim penelitian.</small></span><span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+        </section>
+        <footer class="home-footer">
+          <div class="w footer-layout">
+            <div class="footer-brand">
+              <a href="#top" class="footer-wordmark">Green AI Literacy</a>
+              <p>Belajar menggunakan AI dengan lebih sadar terhadap dampaknya.</p>
+              <p>MAN Insan Cendekia Padang Pariaman · OMI Riset 2026</p>
+            </div>
+            <nav aria-label="Tautan footer">
+              <button data-go="model">Model G-R-E-E-N</button>
+              <button data-go="panduan">Panduan fasilitator</button>
+              <button data-go="riset">Hasil riset</button>
+              <button data-go="saran">Saran dan masukan</button>
+            </nav>
+          </div>
+        </footer>
       </div>
       <div class="pg" id="p-model">
         <section id="model">
@@ -668,6 +782,20 @@
               Rubrik dan rekap kelas
             </button>
             <h3 style="margin-top: 32px">Alur tiga sesi</h3>
+            <aside class="facilitator-label-guide" aria-label="Keterangan label kegiatan">
+              <div>
+                <span class="tg i">INTI</span>
+                <p>Bagian pokok yang menjaga tujuan sesi.</p>
+              </div>
+              <div>
+                <span class="tg b">BEBAS</span>
+                <p>Ruang yang dapat diatur fasilitator.</p>
+              </div>
+              <div>
+                <span class="tg e">ELASTIS</span>
+                <p>Durasi atau cara pelaksanaan dapat disesuaikan.</p>
+              </div>
+            </aside>
             <details>
               <summary>Sesi 1 (G + R): Prolog, Unit 1, Unit 2</summary>
               <ul>
@@ -830,7 +958,7 @@
               Catat setiap tugas yang melibatkan AI. Dari catatan ini terlihat
               polamu dari waktu ke waktu. Ini bukan penilaian.
             </p>
-            <div class="f" style="display: grid; gap: 10px; max-width: 620px">
+            <div class="f log-form">
               <input
                 id="ga_t"
                 placeholder="Tugas atau mapel"
@@ -929,7 +1057,7 @@
           <div class="w">
             <h2>Saran dan masukan</h2>
             <p>Bantu kami memperbaiki Green AI Literacy.</p>
-            <div class="f" style="display: grid; gap: 10px; max-width: 560px">
+            <div class="f feedback-form">
               <select id="sp" aria-label="Peran">
                 <option>Siswa</option>
                 <option>Guru</option>

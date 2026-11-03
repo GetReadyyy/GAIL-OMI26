@@ -47,6 +47,25 @@
     bar.insertBefore(label, nav);
   }
 
+  document.querySelectorAll(".nav-menu").forEach((menu) => {
+    menu.addEventListener("pointerenter", (event) => {
+      if (event.pointerType === "touch") return;
+      document.querySelectorAll(".nav-menu[open]").forEach((openMenu) => {
+        if (openMenu !== menu) openMenu.open = false;
+      });
+      menu.open = true;
+    });
+    menu.addEventListener("pointerleave", () => {
+      if (!menu.contains(document.activeElement)) menu.open = false;
+    });
+    menu.addEventListener("focusout", () => {
+      queueMicrotask(() => {
+        if (!menu.contains(document.activeElement) && !menu.matches(":hover"))
+          menu.open = false;
+      });
+    });
+  });
+
   document.addEventListener("click", (event) => {
     document.querySelectorAll(".nav-menu[open]").forEach((menu) => {
       if (!menu.contains(event.target)) menu.open = false;
@@ -77,5 +96,6 @@
     else seen.observe(el);
   };
 
+  document.documentElement.classList.add("reveal-ready");
   document.querySelectorAll(".rv:not(.in)").forEach((el) => window.nolReveal(el));
 })();

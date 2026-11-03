@@ -1771,6 +1771,7 @@ function gof() {
   go(Math.min(f < 0 ? 4 : f, ROLE === "g" ? 1 : 4));
 }
 function applyRole() {
+  $("#home-progress").hidden = ROLE === "g";
   $("#me").textContent =
     ROLE === "g"
       ? ""
@@ -2169,7 +2170,7 @@ function rvi() {
   const rm = matchMedia("(prefers-reduced-motion:reduce)").matches;
   document
     .querySelectorAll(
-      ".pg.on .stats div,.pg.on .tiles button,.pg.on .prod article,.pg.on .flow div,.pg.on .sr,.pg.on details,.pg.on .rm3>div",
+      ".pg.on .stats div,.pg.on .tiles button,.pg.on .prod article,.pg.on .flow div,.pg.on .sr,.pg.on details,.pg.on .rm3>div,.pg.on > section .w > h2,.pg.on .section-heading,.pg.on .simulator-copy,.pg.on .about-evidence,.pg.on .green-steps li,.pg.on .path-card,.pg.on .feature-list button,.pg.on .footer-brand,.pg.on .footer-layout nav button",
     )
     .forEach((e, i) => {
       if (e.dataset.rv) return;
