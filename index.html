@@ -33,7 +33,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="theme.css" />
     <script defer src="main.js"></script>
     <script defer src="scroll.js"></script>
     <script
@@ -42,211 +42,6 @@
     ></script>
     <script defer src="supabase-config.js"></script>
     <script defer src="admin.js"></script>
-    <style>
-      html {
-        font-size: 100%;
-        scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 72px);
-      }
-      body {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      .mu {
-        font-size: 1rem;
-      }
-      .w {
-        max-width: 90rem;
-        margin-inline: auto;
-        padding-inline: clamp(20px, 4vw, 48px);
-      }
-      section {
-        padding-block: clamp(48px, 6vw, 84px);
-      }
-      .hero {
-        padding-block: clamp(64px, 9vw, 112px);
-      }
-      .hero h1 {
-        max-width: 24ch;
-        font-size: clamp(2.5rem, 6vw, 5rem);
-        line-height: 1.02;
-        letter-spacing: -0.035em;
-      }
-      .hero canvas {
-        opacity: 0.16;
-      }
-      .hero p {
-        max-width: 65ch;
-      }
-      .hero p[style] {
-        font-size: 1rem !important;
-      }
-      .nav .w {
-        max-width: 1480px;
-        height: auto;
-        min-height: 64px;
-        padding-block: 8px;
-        gap: 4px;
-      }
-      .nav .lg,
-      .nav .w > span:not(.me) {
-        flex: none;
-      }
-      .nav .w > span:not(.me) {
-        white-space: nowrap;
-      }
-      .nav .l,
-      .nav #th {
-        flex: none;
-        padding: 8px 10px;
-        border-radius: 8px;
-        font-size: 0.88rem;
-        transition:
-          background 0.18s,
-          color 0.18s;
-      }
-      .nav .l:hover,
-      .nav #th:hover {
-        background: var(--sf);
-      }
-      .nav .l[aria-current="page"] {
-        border: 0;
-        background: var(--sf);
-        color: var(--g);
-      }
-      .nav #lgb {
-        border-radius: 8px;
-        padding: 8px 14px;
-      }
-      .btn {
-        border-radius: 8px;
-        transition:
-          transform 0.18s,
-          background 0.18s;
-      }
-      .btn:not(:disabled):hover {
-        transform: translateY(-2px);
-      }
-      button:not(:disabled),
-      a {
-        transition:
-          background-color 0.18s,
-          color 0.18s,
-          border-color 0.18s;
-      }
-      button:focus-visible,
-      a:focus-visible,
-      input:focus-visible,
-      textarea:focus-visible,
-      select:focus-visible,
-      summary:focus-visible {
-        outline: 3px solid var(--b);
-        outline-offset: 3px;
-      }
-      .stats {
-        gap: 16px;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-      }
-      .stats div {
-        padding: 20px;
-        font-size: 1rem;
-      }
-      .stats b {
-        font-size: clamp(2rem, 4vw, 2.7rem);
-        line-height: 1.1;
-        margin-bottom: 6px;
-      }
-      .tiles {
-        gap: 14px;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-      }
-      .tiles button {
-        min-height: 100%;
-        padding: 20px;
-      }
-      .tiles button:focus-visible,
-      .myth button:focus-visible,
-      .hud button:focus-visible,
-      .opt:focus-visible {
-        outline-offset: 3px;
-      }
-      .chain {
-        gap: 10px;
-      }
-      .node {
-        min-height: 76px;
-        padding: 14px;
-      }
-      .ask {
-        gap: 12px;
-      }
-      .ask input,
-      .f input,
-      .f textarea {
-        min-height: 48px;
-      }
-      footer {
-        padding-block: 36px;
-        font-size: 1rem;
-      }
-      @media (max-width: 980px) {
-        .nav .w {
-          flex-wrap: wrap;
-          justify-content: flex-start;
-        }
-      }
-      @media (max-width: 720px) {
-        .w {
-          padding-inline: 20px;
-        }
-        .nav .w {
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          white-space: nowrap;
-          overscroll-behavior-x: contain;
-          scrollbar-width: thin;
-        }
-        .nav .lg,
-        .nav .w > span:not(.me) {
-          display: none;
-        }
-        .nav .l,
-        .nav #th {
-          padding: 8px 11px;
-        }
-        .hero {
-          padding-block: 56px 48px;
-        }
-        .hero h1 {
-          max-width: 24ch;
-          font-size: clamp(2rem, 8vw, 2.6rem);
-        }
-        .ask {
-          align-items: stretch;
-        }
-        .ask input {
-          min-width: 0;
-          width: 100%;
-        }
-        .ask .btn {
-          width: 100%;
-        }
-        .chain {
-          gap: 8px;
-        }
-        .node {
-          min-height: 0;
-        }
-        #mb {
-          display: none;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .btn:not(:disabled):hover {
-          transform: none;
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="theme.css" />
   </head>
   <body>
     <a class="skip" href="#app-main">Lewati ke konten</a>
@@ -494,21 +289,6 @@
             </div>
           </div>
         </section>
-        <footer class="home-footer">
-          <div class="w footer-layout">
-            <div class="footer-brand">
-              <a href="#top" class="footer-wordmark">Green AI Literacy</a>
-              <p>Belajar menggunakan AI dengan lebih sadar terhadap dampaknya.</p>
-              <p>MAN Insan Cendekia Padang Pariaman · OMI Riset 2026</p>
-            </div>
-            <nav aria-label="Tautan footer">
-              <button data-go="model">Model G-R-E-E-N</button>
-              <button data-go="panduan">Panduan fasilitator</button>
-              <button data-go="riset">Hasil riset</button>
-              <button data-go="saran">Saran dan masukan</button>
-            </nav>
-          </div>
-        </footer>
       </div>
       <div class="pg" id="p-model">
         <section id="model">
@@ -1214,7 +994,19 @@
                   Keluar
                 </button>
               </div>
-              <section class="admin-section">
+              <div class="stats admin-kpis" id="admin-kpis">
+                <div><b id="kpi-feedback">0</b>masukan pengguna</div>
+                <div><b id="kpi-content">0</b>blok konten terbit</div>
+                <div><b id="kpi-research">0</b>hasil riset tersimpan</div>
+                <div><b id="kpi-status" style="color:var(--g)">Online</b>koneksi Supabase</div>
+              </div>
+              <div class="tabs admin-tabs" role="tablist" id="admin-tabs">
+                <button type="button" role="tab" class="admin-tab" data-tab="all" aria-selected="true">Semua Bagian</button>
+                <button type="button" role="tab" class="admin-tab" data-tab="content" aria-selected="false">Kelola Konten</button>
+                <button type="button" role="tab" class="admin-tab" data-tab="feedback" aria-selected="false">Masukan Pengguna</button>
+                <button type="button" role="tab" class="admin-tab" data-tab="research" aria-selected="false">Hasil Riset</button>
+              </div>
+              <section class="admin-section" id="admin-section-content">
                 <h2 id="content-form-title">Tambah blok konten</h2>
                 <form id="content-form" class="f admin-form">
                   <label for="content-page">Halaman</label>
@@ -1256,13 +1048,59 @@
                     </button>
                   </div>
                 </form>
+                <div id="content-preview-container" class="admin-preview-box" hidden>
+                  <h3>Pratinjau Blok Konten</h3>
+                  <article class="dynamic-content-item">
+                    <h2 id="content-preview-title"></h2>
+                    <p id="content-preview-body"></p>
+                  </article>
+                </div>
+                <div class="admin-filter-bar">
+                  <label for="content-filter-page" class="sr-only">Filter Halaman</label>
+                  <select id="content-filter-page">
+                    <option value="all">Semua halaman</option>
+                    <option value="beranda">Beranda</option>
+                    <option value="panduan">Panduan</option>
+                    <option value="model">Model</option>
+                    <option value="lab">Lab</option>
+                    <option value="misi">Misi</option>
+                    <option value="kartu">Kartu</option>
+                    <option value="lacak">Pelacak</option>
+                    <option value="log">Log AI</option>
+                    <option value="asesmen">Asesmen</option>
+                    <option value="riset">Riset</option>
+                    <option value="saran">Saran</option>
+                    <option value="tentang">Tentang</option>
+                  </select>
+                </div>
                 <div id="admin-content-list" class="admin-list"></div>
               </section>
-              <section class="admin-section">
-                <h2>Masukan pengguna</h2>
+              <section class="admin-section" id="admin-section-feedback">
+                <div class="admin-section-header">
+                  <h2>Masukan pengguna</h2>
+                  <div class="row admin-feedback-tools">
+                    <input id="feedback-search" type="search" placeholder="Cari nama atau pesan..." />
+                    <select id="feedback-filter-category" aria-label="Filter Kategori">
+                      <option value="all">Semua kategori</option>
+                      <option value="Konten">Konten</option>
+                      <option value="Game">Game</option>
+                      <option value="Tampilan">Tampilan</option>
+                      <option value="Asesmen">Asesmen</option>
+                      <option value="Teknis">Teknis</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                    <select id="feedback-filter-kind" aria-label="Filter Jenis">
+                      <option value="all">Semua jenis</option>
+                      <option value="Saran">Saran</option>
+                      <option value="Masalah">Masalah</option>
+                      <option value="Pujian">Pujian</option>
+                    </select>
+                    <button class="btn o" id="feedback-export-csv" type="button">Ekspor CSV</button>
+                  </div>
+                </div>
                 <div id="admin-feedback-list" class="admin-list"></div>
               </section>
-              <section class="admin-section">
+              <section class="admin-section" id="admin-section-research">
                 <h2>Tambah hasil riset</h2>
                 <form id="research-form" class="f admin-form">
                   <label for="research-count">Jumlah peserta</label>
@@ -1409,6 +1247,22 @@
           </div>
         </section>
       </div>
+
+        <footer class="home-footer">
+          <div class="w footer-layout">
+            <div class="footer-brand">
+              <a href="#top" class="footer-wordmark">Green AI Literacy</a>
+              <p>Belajar menggunakan AI dengan lebih sadar terhadap dampaknya.</p>
+              <p>MAN Insan Cendekia Padang Pariaman · OMI Riset 2026</p>
+            </div>
+            <nav aria-label="Tautan footer">
+              <button data-go="model">Model G-R-E-E-N</button>
+              <button data-go="panduan">Panduan fasilitator</button>
+              <button data-go="riset">Hasil riset</button>
+              <button data-go="saran">Saran dan masukan</button>
+            </nav>
+          </div>
+        </footer>
     </main>
     <dialog id="dlg" aria-labelledby="dlt">
       <h3 id="dlt">Masuk</h3>

@@ -47,26 +47,48 @@
     bar.insertBefore(label, nav);
   }
 
+  let enterTimer = null;
+  let leaveTimer = null;
+
   document.querySelectorAll(".nav-menu").forEach((menu) => {
     menu.addEventListener("pointerenter", (event) => {
       if (event.pointerType === "touch") return;
-      document.querySelectorAll(".nav-menu[open]").forEach((openMenu) => {
-        if (openMenu !== menu) openMenu.open = false;
-      });
-      menu.open = true;
+      clearTimeout(leaveTimer);
+      clearTimeout(enterTimer);
+
+      const anyOpen = document.querySelector(".nav-menu[open]");
+      const delay = anyOpen ? 60 : 130;
+
+      enterTimer = setTimeout(() => {
+        document.querySelectorAll(".nav-menu[open]").forEach((openMenu) => {
+          if (openMenu !== menu) openMenu.open = false;
+        });
+        menu.open = true;
+      }, delay);
     });
+
     menu.addEventListener("pointerleave", () => {
-      if (!menu.contains(document.activeElement)) menu.open = false;
+      clearTimeout(enterTimer);
+      clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(() => {
+        if (!menu.contains(document.activeElement)) {
+          menu.open = false;
+        }
+      }, 220);
     });
+
     menu.addEventListener("focusout", () => {
       queueMicrotask(() => {
-        if (!menu.contains(document.activeElement) && !menu.matches(":hover"))
+        if (!menu.contains(document.activeElement) && !menu.matches(":hover")) {
           menu.open = false;
+        }
       });
     });
   });
 
   document.addEventListener("click", (event) => {
+    clearTimeout(enterTimer);
+    clearTimeout(leaveTimer);
     document.querySelectorAll(".nav-menu[open]").forEach((menu) => {
       if (!menu.contains(event.target)) menu.open = false;
     });
