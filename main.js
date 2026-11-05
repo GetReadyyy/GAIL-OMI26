@@ -200,7 +200,7 @@ function fin(i) {
 function go(i) {
   if ((i && !done[i - 1]) || (i >= 2 && ROLE === "g")) {
     if (i >= 2 && ROLE === "g")
-      say("Masuk sebagai siswa untuk membuka level ini.");
+      say("Masuk sebagai murid untuk membuka level ini.");
     return;
   }
   cur = i;
@@ -380,7 +380,7 @@ function l4() {
   const P = [
       ["Role", "Kamu adalah guru biologi."],
       ["Action", "Jelaskan fotosintesis."],
-      ["Context", "Untuk siswa kelas 10."],
+      ["Context", "Untuk murid kelas 10."],
       ["Expectation", "Maksimal tiga paragraf."],
     ],
     T = [
@@ -634,8 +634,8 @@ function route(p, moveFocus = false) {
         need === "f"
           ? "Halaman ini khusus fasilitator. Masuk dengan kode fasilitator untuk membukanya."
           : need === "s"
-            ? "Halaman ini khusus siswa. Masuk sebagai siswa untuk membukanya."
-            : "Halaman ini dibatasi menurut peran. Masuk sebagai siswa atau fasilitator untuk membukanya.";
+            ? "Halaman ini khusus murid. Masuk sebagai murid untuk membukanya."
+            : "Halaman ini dibatasi menurut peran. Masuk sebagai murid atau fasilitator untuk membukanya.";
     }
   }
   if (location.hash !== "#" + want)
@@ -1169,7 +1169,7 @@ function l6() {
       "Kamu memutuskan meminta bantuan AI. Prompt mana yang paling jelas?",
       [
         "Buatkan presentasi.",
-        "Kamu adalah guru IPA. Jelaskan tiga jenis energi terbarukan untuk siswa kelas 10, maksimal lima poin singkat.",
+        "Kamu adalah guru IPA. Jelaskan tiga jenis energi terbarukan untuk murid kelas 10, maksimal lima poin singkat.",
         "Jelaskan semuanya tentang energi dari awal sejarah sampai masa depan selengkap dan sepanjang mungkin.",
       ],
       1,
@@ -1385,7 +1385,7 @@ function ar(k) {
 function rb() {
   const R = D.R;
   let h =
-    '<div class="f" style="margin-bottom:12px"><input id="rm" placeholder="Nama siswa yang dinilai"></div><p class="mu">Pilih skor 1 sampai 4 tiap aspek, berdasarkan Tugas Kinerja dan pola perilaku siswa.</p>';
+    '<div class="f" style="margin-bottom:12px"><input id="rm" placeholder="Nama murid yang dinilai"></div><p class="mu">Pilih skor 1 sampai 4 tiap aspek, berdasarkan Tugas Kinerja dan pola perilaku murid.</p>';
   R.forEach((r, i) => {
     h +=
       '<fieldset style="margin:10px 0"><legend>' +
@@ -1430,7 +1430,7 @@ function rb() {
   });
   up();
   const tx = () =>
-    "Rubrik Observasi Green AI\nSiswa: " +
+    "Rubrik Observasi Green AI\nMurid: " +
     $("#rm").value.trim() +
     "\n" +
     R.map((r, i) => r[0] + ": " + (RV[i] || "-")).join("\n") +
@@ -1775,7 +1775,7 @@ function applyRole() {
   $("#me").textContent =
     ROLE === "g"
       ? ""
-      : (ROLE === "f" ? "Fasilitator" : "Siswa") + (ME.n ? ": " + ME.n : "");
+      : (ROLE === "f" ? "Fasilitator" : "Murid") + (ME.n ? ": " + ME.n : "");
   $("#lgb").textContent = ROLE === "g" ? "Masuk" : "Keluar";
   gof();
 }
@@ -1785,8 +1785,11 @@ function op(r) {
   tg();
 }
 function tg() {
-  $("#dkd").hidden =
-    document.querySelector('input[name="pr"]:checked').value !== "f";
+  const isFacilitator =
+    document.querySelector('input[name="pr"]:checked').value === "f";
+  $("#dkd").hidden = !isFacilitator;
+  $("#dkc").hidden = isFacilitator;
+  $("#class-code-hint").hidden = isFacilitator;
 }
 document.querySelectorAll('input[name="pr"]').forEach((i) => (i.onchange = tg));
 $("#dcl")?.addEventListener("click", () => $("#dlg")?.close());
@@ -1822,7 +1825,7 @@ $("#ddn")?.addEventListener("click", async () => {
     r,
     n,
     k: $("#dkl").value.trim(),
-    kc: $("#dkc").value.trim().toUpperCase(),
+    kc: r === "s" ? $("#dkc").value.trim().toUpperCase() : "",
   };
   try {
     localStorage.setItem("galu", JSON.stringify(ME));
@@ -2021,9 +2024,50 @@ if ($("#ga_x"))
   };
 function rk() {
   $("#ab").innerHTML =
-    '<p>Tempel kode laporan siswa (satu atau banyak, dari email, WhatsApp, atau Classroom). Data diproses di perangkatmu dan tidak dikirim ke mana pun.</p><textarea id="rkt" rows="5" aria-label="Kode laporan siswa" style="width:100%;padding:12px;border-radius:12px;border:2px solid var(--ln);background:var(--sf);color:var(--ink);font:inherit"></textarea><div class="row"><button class="btn" id="rkb" type="button">Proses</button><select id="rkf" aria-label="Filter kelas"><option value="">Semua kelas</option></select><button class="btn o" id="rkx" type="button">Unduh CSV</button></div><div class="err" id="rke" role="alert"></div><div id="rkr" style="overflow-x:auto"></div>';
+    '<h3>Kode kelas</h3>' +
+    '<p>Buat kode untuk dibagikan kepada murid. Murid memasukkan kode ini saat masuk; kode hanya menjadi penanda kelas pada laporan, bukan kata sandi.</p>' +
+    '<div class="row"><input id="rkn" maxlength="40" aria-label="Nama kelas" placeholder="Nama kelas, mis. X IPA 1"><button class="btn" id="rkg" type="button">Buat kode</button></div>' +
+    '<div class="row"><input id="rkgc" maxlength="12" aria-label="Kode kelas yang dibuat" placeholder="Kode kelas akan muncul di sini" readonly><button class="btn o" id="rkc" type="button" disabled>Salin kode</button></div>' +
+    '<p class="mu">Simpan atau bagikan kode ini kepada murid untuk dimasukkan pada kolom kode kelas.</p>' +
+    '<h3>Rekap kelas</h3>' +
+    '<p>Tempel kode laporan murid (satu atau banyak, dari email, WhatsApp, atau Classroom). Data diproses di perangkatmu dan tidak dikirim ke mana pun.</p>' +
+    '<textarea id="rkt" rows="5" aria-label="Kode laporan murid" style="width:100%;padding:12px;border-radius:12px;border:2px solid var(--ln);background:var(--sf);color:var(--ink);font:inherit"></textarea>' +
+    '<div class="row"><button class="btn" id="rkb" type="button">Proses</button><select id="rkf" aria-label="Filter kelas"><option value="">Semua kelas</option></select><button class="btn o" id="rkx" type="button">Unduh CSV</button></div>' +
+    '<div class="err" id="rke" role="alert"></div><div id="rkr" style="overflow-x:auto"></div>';
   let R = [],
     rows = [];
+  $("#rkg").onclick = () => {
+    const className = $("#rkn").value.trim();
+    if (!className) {
+      $("#rke").textContent = "Isi nama kelas sebelum membuat kode.";
+      return;
+    }
+    if (!window.crypto?.getRandomValues) {
+      $("#rke").textContent = "Browser ini tidak mendukung pembuatan kode. Perbarui browser lalu coba lagi.";
+      return;
+    }
+    const alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789",
+      random = new Uint8Array(6);
+    window.crypto.getRandomValues(random);
+    $("#rkgc").value =
+      "GAIL-" + Array.from(random, (value) => alphabet[value % alphabet.length]).join("");
+    $("#rkc").disabled = false;
+    $("#rke").textContent = `Kode untuk ${className} berhasil dibuat. Bagikan kode tersebut kepada murid.`;
+  };
+  $("#rkc").onclick = async () => {
+    const code = $("#rkgc").value;
+    if (!code) {
+      $("#rke").textContent = "Buat kode kelas terlebih dahulu.";
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(code);
+      $("#rke").textContent = "Kode kelas berhasil disalin.";
+    } catch (error) {
+      console.error("Gagal menyalin kode kelas:", error);
+      $("#rke").textContent = "Kode tidak dapat disalin otomatis. Salin kode yang tampil secara manual.";
+    }
+  };
   const sm = (a) => (a ? a.reduce((x, y) => x + y, 0) : null),
     T = (o) => {
       const a = sm(o.L && o.L.akhir),
@@ -2031,6 +2075,7 @@ function rk() {
       return {
         Nama: o.n,
         Kelas: o.k,
+        "Kode kelas": o.kc || "-",
         Misi: o.m + "/5",
         Bintang: o.p,
         Pelacak: o.N + "/14",
@@ -2088,7 +2133,7 @@ function rk() {
     });
     R = Object.values(m);
     $("#rke").textContent = R.length
-      ? R.length + " siswa terbaca."
+      ? R.length + " murid terbaca."
       : "Tidak ada kode laporan yang valid.";
     const ks = [...new Set(R.map((o) => o.k).filter(Boolean))];
     $("#rkf").innerHTML =

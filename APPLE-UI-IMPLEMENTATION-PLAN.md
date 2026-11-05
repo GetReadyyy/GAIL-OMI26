@@ -68,7 +68,7 @@ Menyegarkan antarmuka Green AI Literacy (GAIL) dengan prinsip visual yang terins
 
 - Pertahankan urutan: **Hero → Simulasi → Tentang → Pilih jalur → Ringkasan cara kerja → Fitur lainnya → Footer**.
 - Perjelas tindakan utama dan jelaskan bahwa simulasi memperlihatkan alur/dampak, bukan mengirim prompt ke layanan AI.
-- Pastikan pilihan siswa, fasilitator, dan tamu tetap memicu alur yang benar.
+- Pastikan pilihan murid, fasilitator, dan tamu tetap memicu alur yang benar.
 - Tampilkan progres personal hanya untuk pengguna yang sudah masuk.
 
 **Hasil:** beranda baru yang diuji di desktop, tablet, dan ponsel.
@@ -94,7 +94,7 @@ Kerjakan per kelompok agar regresi mudah dilacak:
 ### 7. Validasi dan iterasi
 
 - Uji rute dan dropdown dengan mouse, keyboard, dan layar sentuh.
-- Uji role tamu, siswa, dan fasilitator serta akses admin.
+- Uji role tamu, murid, dan fasilitator serta akses admin.
 - Uji simulasi, tab, misi, progres, formulir, dan state error/loading.
 - Uji overflow dan keterbacaan pada lebar 1440, 1024, 768, dan 390 piksel.
 - Uji fokus keyboard, kontras, label aksesibel, reduced motion, serta tampilan tanpa JavaScript bila relevan.
@@ -125,7 +125,7 @@ Kerjakan per kelompok agar regresi mudah dilacak:
 
 1. Design tokens dan komponen dasar.
 2. Beranda.
-3. Halaman belajar dan aktivitas siswa.
+3. Halaman belajar dan aktivitas murid.
 4. Panduan dan asesmen fasilitator.
 5. Login dan dashboard admin.
 6. Validasi regresi menyeluruh dan penyempurnaan aksesibilitas.

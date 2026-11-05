@@ -13,7 +13,9 @@
 - Error `Invalid login credentials` (HTTP 400): pastikan email dan kata sandi benar, akun sudah dibuat di proyek yang sama, serta email akun sudah dikonfirmasi.
 - Error `Email not confirmed`: konfirmasi email akun admin melalui tautan dari Supabase sebelum login.
 
-Dashboard mengelola blok konten teks yang diterbitkan pada halaman, masukan pengguna, dan hasil riset. Konten yang sudah tertanam di halaman tidak dihapus atau diganti; blok terbitan ditambahkan setelah konten halaman. Progres siswa tetap tersimpan lokal di perangkat.
+Dashboard mengelola blok konten teks yang diterbitkan pada halaman, masukan pengguna, dan hasil riset. Konten yang sudah tertanam di halaman tidak dihapus atau diganti; blok terbitan ditambahkan setelah konten halaman. Progres murid tetap tersimpan lokal di perangkat.
+
+Fasilitator dapat membuat kode kelas melalui **Asesmen → Rekap kelas**, lalu membagikannya kepada murid. Murid memasukkan kode pada saat masuk; kode kelas dicantumkan dalam laporan untuk membantu pengelompokan dan bukan mekanisme autentikasi.
 
 Jika akun admin lain perlu ditambahkan, buat akun melalui Authentication lalu jalankan perintah berikut di SQL Editor dengan UUID akun yang benar:
 
